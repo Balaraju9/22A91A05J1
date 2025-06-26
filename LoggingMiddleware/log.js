@@ -23,11 +23,11 @@ async function logToServer(stack, level, message) {
     const text = await response.text(); 
     try {
       const data = JSON.parse(text);
-      console.log("✅ Log response:", data);
+      console.log("Log response:", data);
     } catch {
-      console.log("⚠️ Non-JSON response from server:", text);
+      console.log("Non-JSON response from server:", text);
     }
   } catch (error) {
-    console.error("❌ Error sending log:", error);
+    console.error("Error sending log:", error);
   }
 }
